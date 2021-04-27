@@ -16,10 +16,12 @@ if($num ==1)
     
 }
 else{
+    header('location:login.php');
     session_start();
-    $_SESSION['message'] =  "you dont have an account!";
+    $_SESSION['message'] =  "you dont have an account, please register";
     echo $_SESSION['message'];
     session_destroy();
+    
 
 }
 }

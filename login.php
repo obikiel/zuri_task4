@@ -20,5 +20,6 @@ session_start();
         <input type="submit" name="login" value="login"><br><br>
     </form>
         <button class="home"><a href="index.php">home</a></button>
+        <button ><a href="registration.php">register</a></button>
 </body>
 </html>
