@@ -13,7 +13,7 @@ if (isset($_POST['save'])){
     $name=$_POST['name'];
     $address=$_POST['address'];
 
-    $query="INSERT INTO user(name,address) VALUES('$name','$address')"; 
+    $query="INSERT INTO user(name,address) VALUES('$name','$address') WHERE id ='$id'"; 
     mysqli_query($conn,$query);
     $_SESSION['msg']="your details have been entered"; 
     header('location:dashboard.php'); 
@@ -24,14 +24,14 @@ if(isset($_POST['update'])){
     $address = ($_POST['address']);
     $id = ($_POST['id']);  
 
-    mysqli_query($conn, "UPDATE user SET name='$name', address='$address' WHERE username='$username'");
+    mysqli_query($conn, "UPDATE user SET name='$name', address='$address' WHERE id = '$id'");
     $_SESSION['msg']="address updated";
     header('location:dashboard.php');
 }
 // delete from the database
 if(isset($_GET['del'])){
     $id =$_GET['del'];
-    mysqli_query($conn, "DELETE FROM user WHERE username= '$username'");
+    mysqli_query($conn, "DELETE FROM user WHERE id= '$id'");
     $_SESSION['msg'] = "address deleted";
     header('location:dashboard.php');
 }

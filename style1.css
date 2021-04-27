@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    color:white;
+}
+h1{
+    font-size:3em;
+    margin:auto;
+    margin-left:20%;
+    margin-top:10%;
+}
+.button{
+    margin-top:2%;
+    margin-left:43%;
+}
+a{
+    text-decoration: none;
+}
